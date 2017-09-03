@@ -1,0 +1,18 @@
+ {% extends 'fiteat/base.html'%}
+{% load static %}
+
+{% block container %}
+<section class="all_forms">
+<h2> Zarejestruj się by móc korzytać z wszytkich funkcji na stronie. </h2>
+<form action = "." method = "post">
+    {{user_form.as_p}}{% csrf_token %}
+    <p><input type = "submit" value = "Utwórz konto"></p>
+</form>
+</section>  
+{% endblock %}
+
+{% block js %}
+<script src={% static "java_script/jquery-3.2.1.min.js" %}></script>
+<script type="text/javascript" src={% static "java_script/script.js" %}></script>
+<script type="text/javascript" src={% static "java_script/scriptadv.js" %}></script>
+{% endblock %}	 

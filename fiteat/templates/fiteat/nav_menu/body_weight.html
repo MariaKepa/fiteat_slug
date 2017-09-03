@@ -1,0 +1,21 @@
+ {% extends 'fiteat/base.html'%}
+{% load static %}
+{% block container %}
+  
+<div class="container_block">
+  <section class = "aboutme">
+  <p>Witaj.</br> </br>Znalazłeś się na stronie eatfit. Została ona stworzona z pasji.
+    Od dawna interesują mnie tematy dotyczące zdrowego jedzenia i ćwiczeń. Aplikacja umożliwi
+    Ci sprawdzanie kalorycznosci w danych produktach i zapisywanie swojego dziennika. Jeśli masz
+    jakiś pomysł na rozwinięcie tej strony lub dostrzerzesz jakiś błąd zapraszam do kontaktu.</br></br>
+    Miłego pobytu.
+  </p>
+  </section>
+</div>
+{% endblock %}
+
+{% block js %}
+<script src={% static "java_script/jquery-3.2.1.min.js" %}></script>
+<script type="text/javascript" src={% static "java_script/script.js" %}></script>
+<script type="text/javascript" src={% static "java_script/scriptadv.js" %}></script>
+{% endblock %}	 

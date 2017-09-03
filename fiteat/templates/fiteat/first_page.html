@@ -1,0 +1,38 @@
+ {% extends 'fiteat/base.html'%}
+{% load static %}
+
+{% block container %}
+
+  <section id="slider" class="slider">
+       <figure class="slideshow">
+	 <img src={% static "my_app/rek2.jpg" %} class="img-responsive" alt="slide">
+ 	 <img src={% static "my_app/rek3.jpg" %} class="img-responsive" alt="slide">
+ 	 <img src={% static "my_app/rek4.jpg" %} class="img-responsive" alt="slide">
+ 	 <img src={% static "my_app/rek5.jpg" %} class="img-responsive" alt="slide">
+ 	 <div class="w3-left w3-display-left w3-black w3-container w3-large" onclick="plusDivs(-1)">&#10094;</div>
+  <div class="w3-right w3-display-right w3-black w3-container w3-large" onclick="plusDivs(1)">&#10095;</div>
+       </figure>
+     </section>
+     <section class="description" id = "eatfit">
+       <h2>EatFit</br><span style="color:black">Polepsza styl życia</span></h2>
+       <article>
+         <p>To najlepsza aplikacja do liczenia kalorii i planowania posiłków. 
+           Na EatFit wszystko kręci się wokół produktów spożywczych.
+           Nasz portal to baza zważonych produktów oraz dań  i zestaw narzędzi, 
+           które ułatwiają wykorzystywanie informacji o produktach w gotowaniu i dietach. 
+           Możesz u Nas kontrolować Swoje pomiary stworzyć dziennik posiłków,
+            wyliczyć swoje zapotrzebowanie kaloryczne.
+         </p>
+       </article>
+     </section>
+     <section class=info>
+       <p> Jeszcze nie korzystasz z EatFit? Na co czekasz?</br> Zarejestruj się i korzytaj za darmo.</br>
+         <span  style ="color:teal ; font-size:30px" > Osiągnij swój cel i żyj zdrowo! </p>
+      </section>
+{% endblock %}
+
+{% block js %}
+<script src={% static "java_script/jquery-3.2.1.min.js" %}></script>
+<script type="text/javascript" src={% static "java_script/script.js" %}></script>
+<script type="text/javascript" src={% static "java_script/scriptadv.js" %}></script>
+{% endblock %}	 

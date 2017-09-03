@@ -1,0 +1,49 @@
+ {% extends 'fiteat/base.html'%}
+{% load static %}
+{% load calculate_per_gram %}
+{% block container %}
+
+
+<div class="container_block">
+  <section class="calcal">
+  <a href="{% url 'search' %}">szuakj</a>
+  </section>
+  <section class="calpro">
+    <div class="search_product">
+      <p style="background:#CCCCCC"> Tabela kalorii, wartości odżywczych</p>
+    </div>  
+    <div class="diary_table">
+      <table>
+        <tr>
+          <th>Waga</th>
+          <th>Nazwa</th>
+          <th>Data dodania</th>
+          <th>Białko</th>
+          <th>Węglowodany</th>
+          <th>Tłuszcze</th>
+          <th>Kalorie</th>
+          <th>Opcje</th> 
+        </tr>
+        {% for entry in diary_entries %}
+        <tr>
+          <td>{{entry.weight}}</td>
+          <td>{{entry.product.name}}</td>
+          <td>{{entry.published_date}}</td>
+          <td>{% calculate_per_gram entry.weight entry.product.protein %}</td>
+          <td>{% calculate_per_gram entry.weight entry.product.carbon %}</td>
+          <td>{% calculate_per_gram entry.weight entry.product.fats %}</td>
+          <td>{% calculate_per_gram entry.weight entry.product.calories %}</td>
+          <td><a href="{% url 'remove_diary_entry'  id=entry.id%}"><input type = "buttom2" value = "Usuń"></a></td> 
+        </tr> 
+        {%endfor%} 
+      </table>
+    </div>
+  </section>
+</div>
+{% endblock %}
+
+{% block js %}
+<script src={% static "java_script/jquery-3.2.1.min.js" %}></script>
+<script type="text/javascript" src={% static "java_script/script.js" %}></script>
+<script type="text/javascript" src={% static "java_script/scriptadv.js" %}></script>
+{% endblock %}	 

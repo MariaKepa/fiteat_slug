@@ -1,0 +1,46 @@
+ {% extends 'fiteat/base.html'%}
+{% load static %}
+{% block container %}
+<div class="container_block">
+  <p>REGULAMIN SERWISU FITEAT: </p>
+    
+§1 Założenia ogólne
+<ol>
+    <li>Administratorem Serwisu jest Edipresse Polska S.A. z siedzibą w Warszawie,
+       ul. Wiejska19, 00-480 Warszawa, wpisana do rejestru przedsiębiorców
+        Krajowego Rejestru Sądowego, prowadzonego przez Sąd Rejonowy m.st. Warszawy, 
+        XIII Wydział Gospodarczy Krajowego Rejestru Sądowego pod numerem KRS 0000111462, 
+        wysokość kapitału zakładowego 2 311 320,00 PLN („Administrator”).</li>
+    <li>Administrator udostępnia Serwis bezpłatnie w podstawowej wersji.
+       Istnieje też możliwość wykupienia płatnych opcji.</li>
+    <li> Administrator udostępnia do kontaktu adres poczty elektronicznej: 
+      ilewazy@ilewazy.pl oraz nr telefonu: 22 584 22 00.</li>
+</ol>
+§2 Rodzaje i zakres usług świadczonych za pomocą Serwisu</br>
+
+    <ol> Serwis zapewnia zarejestrowanym Użytkownikom:
+    <li> podstawowy kontent tematyczny, w tym informacje dotyczące produktów spożywczych, przelicznik i porównywarkę produktów,
+    <li> możliwość komentowania w wybranych modułach,
+    <li> możliwość zapisu na newsletter,
+    <li> dziennik (opcja płatna).
+    </ol>
+§3 Warunki zawierania i rozwiązywania umów o świadczenie usług drogą elektroniczną</br>
+<ol>
+    <li> Do pełnego korzystania z Serwisu w roli Użytkownika należy zarejestrować się w Serwisie,
+       wypełniając krótki formularz rejestracyjny.</li>
+    <li> Do zawarcia umowy dotyczącej usług płatnych, należy wybrać i wykupić właściwy abonament oraz zarejestrować się w Serwisie, jeśli nie jest się jeszcze jego Użytkownikiem.</li>
+    <li> Zarejestrowany Użytkownik może wykupić płatny abonament korzystając z Ustawień Konta.</li>
+    <li> Umowa płatnego abonamentu zawierana jest na czas określony, wybrany przez Użytkownika i po jego upływie ulega automatycznemu rozwiązaniu.</li>
+   <li> Po upływie ważności usług płatnych funkcjonalność Konta użytkownika zostanie automatycznie ograniczona do usług bezpłatnych.</li>
+    <li> Historyczne dane dziennika posiłków stworzonego w ramach usług płatnych zostaną usunięte po 60 dniach od momentu wygaśnięcia abonamentu płatnego, chyba, że użytkownik ponownie wykupi abonament płatny przed upływem tego okresu.</li>
+    <li> Do rozwiązania umowy korzystania z Serwisu w wersji bezpłatnej wystarczy, że Użytkownik wyśle do Administratora dyspozycję usunięcia konta.</li>
+</ol>
+
+</div>
+{% endblock %}
+
+{% block js %}
+<script src={% static "java_script/jquery-3.2.1.min.js" %}></script>
+<script type="text/javascript" src={% static "java_script/script.js" %}></script>
+<script type="text/javascript" src={% static "java_script/scriptadv.js" %}></script>
+{% endblock %}	 

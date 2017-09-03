@@ -1,0 +1,29 @@
+ {% extends 'fiteat/base.html'%}
+{% load static %}
+
+{% block container %}
+ <form method="get">
+    {{ filter.form.as_p }}
+    <button type="submit">Search</button>
+</form>
+<table>
+  {% for product in filter.qs %}
+     <tr>
+         <td>{{product.name}}</td>
+         <td>{{product.carbon}}</td>
+         <td>{{product.fat}}</td>
+         <td>{{product.protein}}</td>
+         <td>{{product.calories}}</td>
+
+       
+     </tr>
+  {% endfor %}
+</table>
+  
+{% endblock %}
+
+{% block js %}
+<script src={% static "java_script/jquery-3.2.1.min.js" %}></script>
+<script type="text/javascript" src={% static "java_script/script.js" %}></script>
+<script type="text/javascript" src={% static "java_script/scriptadv.js" %}></script>
+{% endblock %}	 

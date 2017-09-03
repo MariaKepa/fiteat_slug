@@ -1,0 +1,579 @@
+body
+{
+	width: 100%;
+	font-size: 20px;
+	margin:0px;
+	/* font-family: 'Open Sans', sans-serif;
+	font-family: 'Poppins', sans-serif;
+	font-family: 'Seaweed Script', cursive;
+	font-family: 'Abhaya Libre', sans-serif; */
+}
+
+header
+{
+	height: 120px;
+	width: 100%;
+	margin: auto;
+}
+
+figure.nav_logo
+{
+	float: left;
+	margin: 0px 0px 0px 30px;
+}
+
+nav
+{
+	height: 80px;
+	float: right;
+	margin: 20px 5px 20px 0px;	
+}
+
+ul.nav_menu
+{
+	padding: 0;
+	list-style-type: none;
+	font-size: 20px;
+	line-height: 200%;
+	text-align: center;
+	font-weight: bold;
+		
+}
+
+ul.nav_menu a
+{
+	color: black;
+	text-decoration: none;
+	display: block;
+}
+
+ul.nav_menu a:hover, a:active
+{
+	color: grey;
+}
+
+ul.nav_menu > li
+{
+	float: left;
+	border-right: 1px dashed #75142a;
+	width: 170px;
+	height: 40px;		
+}
+
+.sticky
+{
+	position: fixed;
+	left: 0;
+	top:0;
+	z-index:100;
+	background-color: white;
+}
+
+.w3-left
+{	
+	cursor: pointer;
+	color: gray;
+	position: absolute;
+	top: 55%;
+	right: 96.5%;
+}
+
+.w3-right
+{
+	cursor: pointer;
+	position: absolute;
+	top: 55%;
+	right:0%;
+}
+
+.w3-black
+{
+    color:#33CCCC !important;
+    background-color: #fff !important;
+}
+
+.w3-container
+{
+	padding: 20px;
+}
+
+.w3-large
+{
+	font-size: 18px;
+}
+
+.container
+{
+	width: 100%;
+	margin: auto;
+}
+
+.container_block
+{
+	margin: 100px 0px 50px 0px;	
+	padding: 30px;
+	text-align: justify;
+}
+
+article.ask
+{
+	margin: 50px 0px;
+	font-family: 'Poppins', sans-serif;	
+}
+
+article.contact
+{	
+	text-align: center;
+	margin: 0px;
+	font-family: 'Open Sans', sans-serif; 
+	font-size: 24px;
+	padding: 50px 100px 0px 0px;
+}
+
+.img-responsive
+{
+	width:100%;
+}
+
+figure.slideshow
+{
+	height: 520px;
+}
+
+section.description
+{
+	margin: auto;
+	padding: 50px;
+	font-family: 'Poppins', sans-serif;	
+}
+
+article p
+{
+	text-align: justify;
+	font-size: 24px;
+}
+
+section.description h2
+{
+	color: teal;
+	text-align: center;
+	font-family: 'Seaweed Script', cursive;
+	font-size: 90px;	
+}
+
+span
+{
+	color: black;
+}
+
+figure.slideshow
+{
+	margin: 10px 0px 10px 0px;
+	height: 520px;
+}
+
+section.info
+{
+	margin: 20px 0px 150px 0px;
+	height: 300px;
+	text-align: justify;	
+	background: #EEEEEE;
+}
+
+section.info p
+{
+	font-family: 'Seaweed Script', cursive;
+	text-align: center;
+	padding: 50px;
+	font-size: 50px; 	
+}
+
+.socials
+{	
+	height: 160px;
+	margin:0px;
+	padding:0;
+	background:#CCCCCC;
+}
+
+.me
+{
+	float: left;
+    text-align: justify;
+	font-family: 'Poppins', sans-serif;
+	width:20%;
+}
+
+ul.nav_me
+{	
+	list-style-type: none;	
+}
+
+ul.nav_me a
+{
+	color: black;
+	text-decoration: none;
+}
+
+ul.nav_me a:hover
+{
+	color: grey;
+	text-decoration: none;
+}
+
+ul.nav_me > li
+{
+        margin: 10px 20px 10px 30px;		
+}	
+
+.socialsdiv
+{
+	margin:0;
+	width: 70%;
+	height: 100%;
+	float: right;
+	text-align: center;
+}
+
+.socialsdiv a
+{
+	color: black;
+	text-decoration: none;
+}
+
+.fb
+{
+	width:25%;
+	height: 100%;
+	float: left;
+}
+.fb:hover
+{
+	background: #4668b3;
+}
+
+.yt
+{
+	width: 25%;
+	height: 100%;
+	float: left;
+}
+.yt:hover
+{
+	background: #d94348;
+}
+
+.ins
+{
+	width:25%;
+	height: 100%;
+	float: left;
+}
+.ins:hover
+{
+	background: #3095d3;
+}
+
+.g
+{
+	width:25%;
+	height: 100%;
+	float: left;
+}
+.g:hover
+{
+	background: #d95333;
+}
+
+footer 
+{	
+	text-align: center;
+	margin: 0px 0px 0px 5px;
+}
+
+.login
+{
+	font-size: 14px;
+	text-align: right;
+	margin: 0px;
+	padding: 10px;	
+}
+.login a
+{
+	text-decoration: none;
+	color:teal;
+}
+/* ---------PRODUCT.HTML------------------ */
+section.products
+{
+	width: 100%;
+	background: #EEEEEE	;
+}
+
+section.products p
+{
+	text-align: center;
+	font-size: 26px;
+	font-family: 'Poppins', sans-serif;
+	padding: 50px;
+}
+
+.category_table
+{
+	margin: 20px 50px 70px 50px;
+	text-align:center;
+	width: 25%;
+	float:left;	
+}
+
+.category_table table img 
+{
+	width: 275px;
+	height: 180px;
+	display: block;
+	margin :20px;
+}
+
+/* ---------------PRODUCT_DETAIL.HTML----------- */
+section.product_detail
+{
+	font-family: 'Poppins', sans-serif;
+	margin: 0px 350px 50px 350px;
+	text-align:center;
+}
+
+section.product_detail p
+{
+	font-size: 24px;
+	padding: 40px;
+	text-align: center;
+}
+
+section.product_detail table th
+{
+	 border: 1px solid black;
+	 padding: 10px;
+	 background: grey;
+}
+
+section.product_detail table tr td 
+{
+	 border: 1px solid black;
+	 padding: 10px;
+}
+	
+/* -----------------TIPS.HTML------------------ */
+.container_block p
+{
+	font-size: 28px;
+	padding: 40px;
+}
+
+.tips_ol li 
+{
+	font-size: 20px;
+	padding: 10px;
+	margin: 0px 0px 0px 40px;
+}
+
+.tips_ol li > a:hover 
+{
+	color:grey;
+}
+
+.tips_ol li > a
+{
+	text-decoration: none;
+	color: black;	
+}
+
+/* --------------DIARY.HTML-------------------- */
+section.calcal
+{
+	height: 400px;
+	background: yellow;
+}
+
+section.calpro
+{
+	margin-right: auto;
+	margin-left:auto;
+	margin-bottom: 20px;
+	margin-top: 20px;
+	border: 1px solid black;
+	border-top-left-radius: 30px;
+	border-top-right-radius: 30px;
+	width: 100%;	
+}
+
+.search_product p
+{
+	margin: 0px;
+	font-size: 20px;
+	border-top-left-radius: 30px;
+	border-top-right-radius: 30px;
+	padding: 15px;
+	text-align: center;
+}
+.diary_table table
+{ 
+	font-family: 'Poppins', sans-serif;
+	margin: auto;
+	width: 90%;
+	margin-top:20px;
+	margin-bottom:20px;
+	text-align:center;
+
+}
+
+.diary_table table th
+{
+	 border: 1px solid black;
+	 padding: 10px;
+	 background: grey;
+	 
+}
+
+.diary_table table tr td 
+{
+	 border: 1px solid black;
+	 padding: 15px;
+	 
+}
+
+input[type=buttom2]
+{
+	border: 1px solid black;
+	text-align: center;
+	margin:2px;
+	width: 80%;
+}
+
+input[type=buttom2]:hover
+{
+	background: grey;
+}
+
+/* -----------LOGIN.HTML-------- */
+input[type=buttom]
+{
+   background: #CCCCCC;
+   margin: auto;
+   display: block;
+   font-size: 18px;
+   width: 15%;
+   text-align:center;
+   padding: 5px;
+}
+
+input[type=buttom]:hover
+{
+   background: grey;
+}
+
+/* --------------_ABOUTME.HTML---------- */
+section.aboutme
+{
+	text-align: justify;
+	font-size: 20px;
+	padding: 10px;
+	font-family: 'Poppins', sans-serif;
+}
+
+/* -----EDIT_PANEL.HTML------- */
+.foto
+{
+	float: left;
+	width: 25%;
+	margin: 20px 40px;	
+}
+
+.foto table, img
+{
+	text-align: center;
+	margin: auto;
+}
+
+.foto:hover
+{
+	background: #DDDDDD;
+} 
+
+/* ------PASSWORD_CHANGE_FORM  (Formularze na wszytkie strony)---- */
+section.all_forms
+{
+	margin: 100px 30px;	
+}
+
+section.all_forms h2
+{
+	font-family: 'Abhaya Libre', sans-serif;
+	text-align: center;
+	padding: 20px;
+}
+
+section.all_forms h6
+{
+	text-align: center;	
+}
+
+section.all_forms form
+{
+	margin: auto;
+	width: 40%;
+	color: grey;
+	padding: 50px 0px;
+}
+
+section.all_forms label
+{
+	display:block;
+	padding: 3px 0px;
+	font-size: 18px;
+	text-align:left;
+	margin:0px;
+}
+
+section.all_forms #id_old_password, #id_new_password1, #id_new_password2, #id_email, #id_username, #id_first_name, #id_password, #id_password2
+{
+	border-style: none none solid none;
+	border-width: 1px;
+	border-color: black;
+	padding: 5px 0px;
+	margin:0px;
+	display: block;
+	width: 100%;
+}
+
+section.all_forms ul > li
+{
+	font-size:13px;
+	text-align: justify;
+	margin:auto;
+	padding:0px;
+	color:black;	
+}
+
+span.helptext
+{
+	font-size: 13px;
+	text-align: justify;
+	margin: 0px;	
+} 
+
+input[type=submit]
+{
+   background: #CCCCCC;
+   margin: auto;
+   display:block;
+   font-size: 25px;
+   width: 40%;
+   padding: 5px 10px;
+   margin-top:50px;
+
+}
+
+input[type=submit]:hover
+{
+   background: grey;
+}

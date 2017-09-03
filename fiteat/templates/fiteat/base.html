@@ -1,0 +1,85 @@
+{% load staticfiles %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>EatFit - Dziennik żywieniowy</title>
+  <link rel="stylesheet" href="{% static 'css/fiteat.css' %}">
+ <link href='http://fonts.googleapis.com/css?family=Abhaya+Libre&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+ <link href="https://fonts.googleapis.com/css?family=Open+Sans|Poppins|Seaweed+Script" rel="stylesheet"> 
+  <link rel="stylesheet" href="{% static 'css/fontello/css/fontello.css'%}">
+</head>
+<body>
+   <header>
+    <figure class="nav_logo">
+      <a href ="{% url 'first_page' %}"><img src={% static "my_app/fit.png" %} alt="Fiteat" width="100" height="120"></a>
+    </figure>
+     <nav>
+      <div class="login">
+        {% if request.user.is_authenticated %}
+          Zalogowany użytkownik: <b>{{request.user.first_name}}</b>|<a href= "{% url 'logout_then_login'%}">Wyloguj</a>    
+        {% else %}
+          <a href="{% url 'login' %}">Zaloguj</a>|<a href="{% url 'register' %}">Rejestracja</a>
+        {% endif %}
+      </div>
+      {% if request.user.is_authenticated %}
+        <ul class="nav_menu">
+          <li><a href="{% url 'diary' %}">DZIENNIK</a></li>
+          {% comment %} <li><a href="{% url 'product' %}">PRODUKTY</a></li> {% endcomment %}
+          <li><a href="{% url 'product_list' %}">PRODUKTY</a></li>
+          <li><a href="{% url 'body_weight' %}">POMIARY</a></li>
+          <li><a href="{% url 'tips' %}">PORADY</a></li> 
+          <li><a href="{% url 'edit_panel' %}">PANEL</a></li>
+          <div style="clear:both"></div>
+        </ul>
+      {%else%}
+        <ul class="nav_menu">
+          <li>
+          <a href="{% url 'first_page' %}">EAT FIT</a></li>
+          {% comment %} <li><a href="{% url 'product' %}">PRODUKTY</a></li> {% endcomment %}
+          <li><a href="{% url 'product_list' %}">PRODUKTY</a></li>
+          <li>
+            {% if user.is_authenticated %}
+              <a href="{% url 'diary' %}">DZIENNIK</a>
+            {% else %}
+              <a href="{% url 'login' %}">DZIENNIK</a>
+            {% endif %}
+          </li>
+          <li><a href="{% url 'tips' %}">PORADY</a></li>
+          <li><a href="{% url 'contact' %}">KONTAKT</a></li>
+        </ul>
+      {% endif %}
+    </nav>
+    <div style="clear:both"></div>
+  </header>
+  <div class = container>
+    {% block container %}
+    {% endblock %}
+  </div>
+  <div class="socials">
+    <div class="me">
+      <ul class="nav_me">
+        <li><b><a href="{% url 'aboutme' %}">O Nas</a></b></li>
+        <li><b><a href="{% url 'contact' %}">Kontakt </a></b></li>
+        <li><b><a href="{% url 'statute' %}">Regulamin</a></b></li>
+      </ul> 
+    </div>
+    <div class ="socialsdiv">
+      <div class= "fb"><a href="https://www.facebook.com/groups/686353901485844/?ref=br_rs" target="_blank"><i class="icon-facebook-squared"></i></a></div>
+      <div class= "yt"><a href="https://www.youtube.com/results?search_query=fit+posilki" target="_blank"><i class="icon-youtube-play"></i></a></div>
+      <div class= "ins"><a href="https://www.instagram.com/shining_star_9/" target="_blank"><i class="icon-instagram"></i></a></div>
+      <div class= "g"><a href="http://gmail.com" target="_blank"><i class="icon-gmail"></i></a></div>
+      <div style="clear:both"></div>	
+    </div>
+    <div style="clear:both"></div>		
+  </div>
+  <footer>
+    <b><h6>"Wszelkie prawa zastrzeżone &copy; 2017"</h6></b>
+  </footer>
+  {% block js %}  	
+  {% endblock %}
+  
+</body>
+</html> 

@@ -1,0 +1,27 @@
+ {% extends 'fiteat/base.html'%}
+{% load static %}
+{% block container %}
+
+<section class = "container_block">
+<article class ="ask">
+<h1 style="color:teal;text-align:center; font-family: 'Seaweed Script', cursive; font-size: 36px"> Co sądzisz o naszej stronie?</h1>
+<p> Masz jakieś pomysły na jej usprawnienie? Chcesz nas o coś zapytać w związku z działalnością eatfit?
+ A może pochwalić, lub skrytykowac? Pisz śmiało, czytamy wszystkie uwagi i na każdą wiadomość postaramy się odpowiedzieć. </p>
+</article>
+<article class="contact">
+<h3>Kontakt</h3>
+<b>Tel.</b> 609015580 </br>
+<b>Email:</b> fiteat@gmail.com</br>
+<b>Adres:</b> ul.Słowackiego 5,</br>
+   32-400 Myślenice</p>
+</article>
+  
+  </section>
+
+{% endblock %}
+
+{% block js %}
+<script src={% static "java_script/jquery-3.2.1.min.js" %}></script>
+<script type="text/javascript" src={% static "java_script/script.js" %}></script>
+<script type="text/javascript" src={% static "java_script/scriptadv.js" %}></script>
+{% endblock %}	 

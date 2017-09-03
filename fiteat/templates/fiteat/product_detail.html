@@ -1,0 +1,35 @@
+ {% extends 'fiteat/base.html'%}
+{% load static %}
+
+{% block container %}
+<section class="product_detail">
+  {% with product=products.first %}
+  <p>Tabela produktów z kategorii: {{product.category.name}} w 100g</p>
+  {%endwith%}
+  <table>
+    <tr>
+        <th>Nazwa produktu</th>
+        <th>Kalorie</th>
+        <th>Białko</th>
+        <th>Tłuszcze</th>
+        <th>Węglowodany</th>
+    </tr>
+      {% for product in products %}
+        <tr>
+          <td> {{product.name}}</td>
+          <td> {{product.calories}}</td>
+          <td> {{product.protein}}</td>
+          <td> {{product.fats}}</td>
+          <td> {{product.carbon}}</td>
+        </tr>
+      {%endfor%} 
+  </table>
+</section>
+{% endblock %}
+
+
+{% block js %}
+<script src={% static "java_script/jquery-3.2.1.min.js" %}></script>
+<script type="text/javascript" src={% static "java_script/script.js" %}></script>
+<script type="text/javascript" src={% static "java_script/scriptadv.js" %}></script>
+{% endblock %}	 

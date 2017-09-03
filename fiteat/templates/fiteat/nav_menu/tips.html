@@ -1,0 +1,36 @@
+ {% extends 'fiteat/base.html'%}
+{% load static %}
+
+
+{% block container %}
+<div class="container_block">
+  <p> Tutaj znajdziesz odpowiedzi na bardzo ciekawe pytania. Każdy link przeniesie Cie do blogu młodej, inteligentnej
+      i pozytywnej osoby fit - Marty. Jej blog jest bardzo ciekawy,
+      wiec jeśli masz wiecej czasu możesz zostać Tam na dłużej</p>
+ <ol class = "tips_ol">
+<li><a href = "http://www.codzienniefit.pl/2017/08/aplikacje-fit.html" target="_blank">
+    FIT aplikacje na telefon, które pomogą ci być w formie </a></li>
+<li><a href = "http://www.codzienniefit.pl/2017/04/5-polskich-zdrowych-produktow-ktore-powinienes-miec-w-swojej-kuchni.html"
+    target="_blank">5 polskich,zdrowych produktów, które powinieneś mieć w swojej kuchni </a></li>
+<li><a href = "http://www.codzienniefit.pl/2016/03/5-bledow-ktore-robisz-myslac-ze-zyjesz-zdrowo.html" target="_blank">
+    5 błędów które robisz, myśląc, że „żyjesz zdrowo” </a></li>
+<li><a href = "http://www.codzienniefit.pl/2017/06/czy-alkohol-tuczy.html" target="_blank"> Czy alkohol Cię tuczy? </a></li>
+<li><a href = "http://www.codzienniefit.pl/2017/07/pomocniki-w-diecie-5-trikow-ktore-ulatwiaja-mi-bycie-fit.html" target="_blank">
+    Pomocniki w diecie </a></li>
+<li><a href = "http://www.codzienniefit.pl/2017/07/zdrowy-szybki-i-dobry-fit-obiad-nie-ma-problemu-2-przepisy.html" target="_blank">
+    Zdrowy, szybki i dobry fit obiad </a></li>
+<li><a href = "http://www.codzienniefit.pl/2017/07/jak-jesc-zdrowo-i-tanio-poradnik.html" target="_blank">
+    Jak jeść zdrowo i tanio? </a></li>
+<li><a href = "http://www.codzienniefit.pl/2017/06/5-mitow-na-temat-zdrowego-zycia-w-ktore-musisz-przestac-wierzyc-juz-teraz.html" target="_blank">
+    5 mitów na temat zdrowego życia </a></li>
+<li><a href = "http://www.codzienniefit.pl/2017/05/4-rady-dotyczace-zdrowego-trybu-zycia-ktore-wcale-nie-sa-prawda.html" target="_blank">
+    4 rady dotyczące zdrowego trybu życia, które wcale nie są prawdą</a></li>
+</ol>
+</div>
+{% endblock %}
+
+{% block js %}
+<script src={% static "java_script/jquery-3.2.1.min.js" %}></script>
+<script type="text/javascript" src={% static "java_script/script.js" %}></script>
+<script type="text/javascript" src={% static "java_script/scriptadv.js" %}></script>
+{% endblock %}	 

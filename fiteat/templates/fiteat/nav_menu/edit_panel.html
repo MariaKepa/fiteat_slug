@@ -1,0 +1,35 @@
+ {% extends 'fiteat/base.html'%}
+{% load static %}
+
+{% block container %}
+<figure class = "login_form">
+    <div class = "foto">
+        <table>
+            <tr><td><a href="{% url 'password_change'%}">
+            <img src={% static "my_app/haslo.png" %} alt="haslo" width="120" height="120"></a></td></tr>
+            <tr><td> Zmień hasło</td></tr> 
+        </table>
+    </div>
+     <div class = "foto">
+        <table>
+            <tr><td><a href="{% url 'profile'%}">
+            <img src={% static "my_app/person.png" %} alt="haslo" width="120" height="120"></a></td></tr>
+            <tr><td> Profil </td></tr> 
+        </table>
+    </div>
+    <div class = "foto">
+        <table>
+            <tr><td><a href="{% url 'calories'%}">
+            <img src={% static "my_app/kaloria.jpg" %} alt="haslo" width="120" height="120"></a></td></tr>
+            <tr><td> Zapotrzebowanie </td></tr> 
+        </table>
+    </div>
+    <div style="clear:both"></div>
+</figure> 
+{% endblock %}
+
+{% block js %}
+<script src={% static "java_script/jquery-3.2.1.min.js" %}></script>
+<script type="text/javascript" src={% static "java_script/script.js" %}></script>
+<script type="text/javascript" src={% static "java_script/scriptadv.js" %}></script>
+{% endblock %}	 
