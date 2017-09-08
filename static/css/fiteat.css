@@ -338,7 +338,7 @@ section.products p
 section.product_detail
 {
 	font-family: 'Poppins', sans-serif;
-	margin: 0px 350px 50px 350px;
+	margin: 20px 350px 50px 350px;
 	text-align:center;
 }
 
@@ -347,6 +347,17 @@ section.product_detail p
 	font-size: 24px;
 	padding: 40px;
 	text-align: center;
+}
+section.product_detail a
+{
+	font-size: 20px;
+	text-decoration: none;
+	color:black;
+}
+
+section.product_detail a:hover
+{
+	color:grey;
 }
 
 section.product_detail table th
@@ -577,3 +588,210 @@ input[type=submit]:hover
 {
    background: grey;
 }
+
+/* ------CAT_SEARCH.HTML---- */
+.entry_diary
+{
+	width:20%;
+	margin-left:auto;
+	margin-top: 30px;
+	padding:8px;
+	font-size: 20px;
+	background:#CCCCCC;
+	text-align:center;
+}
+.entry_diary a
+{
+	text-decoration: none;
+	background: #BBBBBB;
+	color:black;
+	padding:5px;
+}
+.product-list
+{
+	width: 30%;
+	float:left;
+	padding:50px 0px;
+	
+}
+
+.product-list p
+{
+	font-weight: bold;
+}
+.product-list a
+{
+	text-decoration: none;
+	color:black;
+	padding: 5px;
+}
+
+.product-list a:hover
+{
+	color:grey;
+}
+
+.product-list li
+{
+	padding: 3px;
+}
+
+.product-detail
+{
+	width: 70%;
+	margin-left: auto;
+	margin-right: auto;
+	clear:both;
+	text-align: center;
+	margin-bottom: 10px;
+	
+}
+
+.product-detail table th
+{
+	 border: 1px solid black;
+	 padding: 10px;
+	 background: grey;
+}
+
+.product-detail table tr td 
+{
+	 border: 1px solid black;
+	 padding: 10px;
+}
+
+.product-detail a, td.color
+{
+	text-decoration: none;
+	color:black;
+	background: #CCCCCC;
+}
+.product-detail a:hover
+{
+	color:grey;
+}
+
+.product-detail-search
+{
+	width: 70%;
+	margin-left: auto;
+	margin-right: auto;
+	float:left;
+	text-align: center;
+	margin-bottom: 10px;
+	
+}
+
+.product-detail-search table th
+{
+	 border: 1px solid black;
+	 padding: 10px;
+	 background: grey;
+}
+
+.product-detail-search table tr td 
+{
+	 border: 1px solid black;
+	 padding: 10px;
+}
+
+.product-detail-search a, td.color
+{
+	text-decoration: none;
+	color:black;
+	background: #CCCCCC;
+}
+.product-detail-search a:hover
+{
+	color:grey;
+}
+
+.search_form
+{
+	width: 100%;
+	background: #CCCCCC;
+	text-align:center;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 20px;
+	padding: 50px 0px;
+	font-size: 25px;
+}
+/* ------------CART/DETAIL.HTML-------- */
+
+section.add_product table 
+{
+	width: 90%;
+	margin-left: auto;
+	margin-right:auto;
+	margin-top: 100px;
+	margin-bottom: 50px;
+}
+
+section.add_product th
+{
+	 border: 1px solid black;
+	 padding: 10px;
+	 background: grey;
+}
+
+section.add_product table tr td 
+{
+	 border: 1px solid black;
+	 padding: 10px;
+}
+
+p.text-right
+{
+	text-align:right;
+	margin: 10px;
+}
+
+p.text-right a
+{
+	text-decoration: none;
+	color:black;
+}
+
+p.text-right a:hover
+{
+	color:grey;
+}
+
+section.add_product  a
+{
+	text-decoration: none;
+	color:black;
+}
+
+section.add_product a:hover
+{
+	color:grey;
+}
+
+input[type=submit1]
+{
+   background: #CCCCCC;
+   margin: 2px 5px 2px 20px;
+   font-size: 18px;
+   padding: 5px;
+   width: 40%;
+}
+input[type=submit1]:hover
+{
+   background: grey;
+}
+/* -----SEARCH.HTML---- */
+
+.search_form1
+{
+	width: 100%;
+	background:#CCCCCC;
+	height: 200px;
+	text-align:center;
+	margin: 70px 0px;
+	padding: 30px;
+}
+
+
+

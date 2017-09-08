@@ -1,0 +1,55 @@
+{% extends "fiteat/base.html" %}
+{% load static %}
+{% load calculate_per_gram %}
+{% block container%}
+  
+<section class="add_product">
+<table>
+    <thead>
+      <tr>
+        <th>Nazwa</th>
+        <th>Zmień wage</th>
+        <th> Waga</th>
+        <th>Kalorie</th>
+        <th>Białko</th>
+        <th>Węglowodany</th>
+        <th>Tłuszcze</th>
+        <th>Usuń</th> 
+      </tr>
+    </thead>
+    <tbody>
+       {% for item in cart %}
+        {% with product=item.product %}
+          <tr>
+            <td>{{ product.name }}</td>
+            <td>
+              <form action="{% url "cart:cart_add" product.id %}" method="post">
+                {{ item.update_quantity_form.quantity }}
+                {{ item.update_quantity_form.update }}
+                <input type="submit" value="OK">
+                {% csrf_token %}
+              </form>
+            </td>
+            <td>{{ item.total_weight }}</td>
+            {% comment %} <td class="num">{{ item.weight }} g</td>
+            <td class="num">{{ item.total_weight }} g</td> {% endcomment %}
+            <td>{% calculate_per_gram item.quantity product.calories %}</td>
+            <td>{% calculate_per_gram item.quantity product.protein %}</td>           
+            <td>{% calculate_per_gram item.quantity product.carbon %}</td>
+            <td>{% calculate_per_gram item.quantity product.fats %}</td>
+            <td><a href="{% url "cart:cart_remove" product.id %}">Usuń</a></td> 
+          </tr>
+        {% endwith %}
+      {% endfor %}
+      <tr class="total">
+        <td colspan='2'>Wartość całkowita</td> 
+        <td>{{ cart.get_total_weight }} g</td>
+        {% comment %} <td>{{ cart.get_total_protein }} g</td> {% endcomment %}
+          
+    </tr>
+    </tbody>
+  </table>
+  <p class="text-right">
+    <a href="{% url "fiteat:search" %}" class="button light">Kontynuj dodwanie produktów</a>
+  </p> 
+{% endblock %}

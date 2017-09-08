@@ -3,28 +3,40 @@
 
 {% block container %}
 <section class="product_detail">
-  {% with product=products.first %}
-  <p>Tabela produktów z kategorii: {{product.category.name}} w 100g</p>
-  {%endwith%}
+  <h3>{% if category %}{{ category.name }}{% else %}Produkty{% endif %}</h3>
   <table>
     <tr>
         <th>Nazwa produktu</th>
+        <th>Kategoria</th>
+        <th> Waga</th>
         <th>Kalorie</th>
         <th>Białko</th>
         <th>Tłuszcze</th>
         <th>Węglowodany</th>
+        {% if request.user.is_authenticated %}
+          <th>Opcje</th>
+        {% endif%}
+        
+        
     </tr>
       {% for product in products %}
         <tr>
           <td> {{product.name}}</td>
+          <td> {{product.category.name}}</td>
+          <td> {{product.weight}}</td>
           <td> {{product.calories}}</td>
           <td> {{product.protein}}</td>
           <td> {{product.fats}}</td>
           <td> {{product.carbon}}</td>
+          {% if request.user.is_authenticated %}
+          <td class="color"><a href = "{{product.get_absolute_url}}">Dodaj</a></td>
+          {% endif%}
+          
         </tr>
       {%endfor%} 
   </table>
-</section>
+  <a href="{%url 'fiteat:cat_list'%}"> Wróc do kategori</a>
+</section> 
 {% endblock %}
 
 

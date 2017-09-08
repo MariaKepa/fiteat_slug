@@ -1,0 +1,93 @@
+ {% comment %} {% extends 'fiteat/base.html'%}
+{% load static %}
+
+{% block container%}
+<div class="entry_diary">
+    <a href="{%url 'cart:cart_detail'%}">Dziennik produktów</a>
+</div>
+
+<div class="search_form1">
+ <form method="get">
+    {{ filter.form.as_p }}
+    <button type="submit">Szukaj</button>
+ </form>
+</div>
+<div class="product-detail">
+  <table>
+    <table>
+         <tr>
+            
+            <th>Nazwa produktu</th>
+            <th> Waga</th>
+            <th>Kalorie</th>
+            <th>Białko</th>
+            <th>Tłuszcze</th>
+            <th>Węglowodany</th>
+            <th> Opcje</th>
+        </tr>
+  `     {% for product in filter.qs %}
+        <tr>
+            
+            <td>{{product.name}}</td>
+            <td>{{product.weight}}</td>
+            <td>{{product.calories}}</td>
+            <td>{{product.protein}}</td>
+            <td>{{product.fats}}</td>
+            <td>{{product.carbon}}</td>
+            <td class="color"><a href = "{{product.get_absolute_url}}">Dodaj</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>  
+{% comment %}
+<div class="search_form">
+        <a href="{% url 'fiteat:search'%}">Wyszukaj produkt</a>
+</div>
+<div class="product-list">    
+    <p> KATEGORIE PRODUKTÓW </p> 
+    <ul>
+        <li {%if not category %}class="selected"{% endif%}>
+            <a href="{% url 'fiteat:cat_list'%}">Wszytskie</a>
+        </li>
+        {% for cat in categories %}
+        <li{% if category.slug == cat.name%} class="selected"{% endif%}>
+        <a href="{{cat.get_absolute_url}}">{{cat.name}}</a>
+        </li>
+        {% endfor%}
+    </ul>
+</div>
+
+<div class="product-detail-search">
+    <h1> {%if category%}{{category.name}}{%else%}Produkty{%endif%}</h1>
+    <table>
+         <tr>
+            <th>Nazwa produktu</th>
+            <th> Waga</th>
+            <th>Kalorie</th>
+            <th>Białko</th>
+            <th>Tłuszcze</th>
+            <th>Węglowodany</th>
+            <th> Opcje</th>
+        
+        </tr>
+        {% for product in products %}
+        <tr>
+            <td> {{product.name}}</td>
+            <td> {{product.weight}}</td>
+            <td> {{product.calories}}</td>
+            <td> {{product.protein}}</td>
+            <td> {{product.fats}}</td>
+            <td> {{product.carbon}}</td>
+            <td class="color"><a href = "{{product.get_absolute_url}}">Dodaj</a></td>
+        </tr>
+        {%endfor%}
+    </table>
+</div>
+<div style="clear:both"></div>
+
+
+{% block js %}
+<script src={% static "java_script/jquery-3.2.1.min.js" %}></script>
+<script type="text/javascript" src={% static "java_script/script.js" %}></script>
+<script type="text/javascript" src={% static "java_script/scriptadv.js" %}></script>
+{% endblock %}	   {% endcomment %}

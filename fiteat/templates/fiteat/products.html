@@ -2,51 +2,25 @@
 {% load static %}
 
 {% block container %}
- <section class="products">
-  <p> KATEGORIE PRODUKTÓW </p> 
-   
-    {% comment %} {% for category in categorys %}
-   
-    <div class= "category_table">
-      <table>
-          <tr><td><a href="{% url 'product_detail' id=category.id %}">
-          <img src={% static category.pathtopicture %} 
-        class="img_responsive"></a></td></tr>
-        <tr><td>{{category.name}}</td></tr> 
-      </table>
-    </div>
-    {% if forloop.counter|divisibleby:3 %}
-    <div style="clear:both"></div>
-    {% endif %}
-    {%endfor%}   {% endcomment %}
 
-    {% comment %} {% for cat in categories %}
+ <section class="products">
+   
+  <p> KATEGORIE PRODUKTÓW </p> 
+  
+    {% for cat in categories %}
     {% if category.slug == cat.name%} class="selected"{% endif%}
     <div class= "category_table">
       <table>
-          <tr><td ><img src={% static category.pathtopicture %}</td></tr> 
-          <tr><td >{{category.name}}</td></tr>
+          <tr><td ><a href="{{cat.get_absolute_url}}">
+            <img src={% if cat.image %}{{cat.image.url}}{%else%}{% static "fotocategory/owoce.jpg"%}{%endif%}></a></td></tr> 
+          <tr><td >{{cat.name}}</td></tr>
       </table>
     </div>
     {% if forloop.counter|divisibleby:3 %}
     <div style="clear:both"></div>
     {% endif %}
-    {%endfor%}  {% endcomment %}
-    <div id="sidebar">
-    <h3>Kategorie</h3>
-    <ul>
-      <li {% if not category %}class="selected"{% endif %}>
-        <a href="">Wszystkie</a>
-      </li>
-      {% for c in categories %}
-        <li {% if category.slug == c.slug %}class="selected"{% endif %}>
-          <a href="{{ c.get_absolute_url }}">{{ c.name }}</a>
-        </li>
-      {% endfor %}
-    </ul>
-  </div> 
-   
- <div style="clear:both"></div>
+    {%endfor%} 
+    <div style="clear:both"></div>
  </section>
 {% endblock %}
 

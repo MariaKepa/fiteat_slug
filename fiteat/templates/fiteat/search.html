@@ -1,25 +1,44 @@
- {% extends 'fiteat/base.html'%}
+{% extends 'fiteat/base.html'%}
 {% load static %}
-
 {% block container %}
+<div class="entry_diary">
+    <a href="{%url 'cart:cart_detail'%}">Dziennik produktów</a>
+</div>
+<div class="search_form1">
  <form method="get">
     {{ filter.form.as_p }}
-    <button type="submit">Search</button>
-</form>
-<table>
-  {% for product in filter.qs %}
-     <tr>
-         <td>{{product.name}}</td>
-         <td>{{product.carbon}}</td>
-         <td>{{product.fat}}</td>
-         <td>{{product.protein}}</td>
-         <td>{{product.calories}}</td>
+    <button type="submit">Szukaj</button>
+ </form>
+</div>
+<div class="product-detail">
+    
 
-       
-     </tr>
-  {% endfor %}
-</table>
-  
+        <table>
+    <table>
+         <tr>
+            <th> Kategoria</th>
+            <th>Nazwa produktu</th>
+            <th> Waga</th>
+            <th>Kalorie</th>
+            <th>Białko</th>
+            <th>Tłuszcze</th>
+            <th>Węglowodany</th>
+            <th> Opcje</th>
+        </tr>
+  `     {% for product in filter.qs %}
+        <tr>
+            <td>{{product.category.name}}</td>
+            <td>{{product.name}}</td>
+            <td>{{product.weight}}</td>
+            <td>{{product.calories}}</td>
+            <td>{{product.protein}}</td>
+            <td>{{product.fats}}</td>
+            <td>{{product.carbon}}</td>
+            <td class="color"><a href = "{{product.get_absolute_url}}">Dodaj</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>  
 {% endblock %}
 
 {% block js %}

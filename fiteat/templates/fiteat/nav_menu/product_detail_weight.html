@@ -1,0 +1,42 @@
+ {% extends 'fiteat/base.html'%}
+{% load static %}
+
+{% block container %}
+
+
+<section class="product_detail">
+    <h1> {{product.name}}</h1>
+    <h2><a href="{{product.category.get_absolute_url}}">{{product.category}}</a></h2>
+    <table>
+        <tr>
+            <th>Kalorie</th>
+            <th>Białko</th>
+            <th>Tłuszcze</th>
+            <th>Weglowodany</th>
+            <th>Waga</th>
+            
+        </tr>
+        <tr>
+            
+            <td>{{product.calories}}</td>
+            <td>{{product.protein}}</td>
+            <td>{{product.fats}}</td>
+            <td>{{product.carbon}}</td>
+            <td>{{product.weight}}</td>
+        </tr>
+    </table>
+     <form action="{% url 'cart:cart_add' product.id %}" method="post">
+        {{ cart_product_form }}
+        {% csrf_token %}
+        <input type="submit" value="Dodaj do dziennika">
+     </form>
+
+</section>
+{% endblock %}
+
+
+{% block js %}
+<script src={% static "java_script/jquery-3.2.1.min.js" %}></script>
+<script type="text/javascript" src={% static "java_script/script.js" %}></script>
+<script type="text/javascript" src={% static "java_script/scriptadv.js" %}></script>
+{% endblock %}	 

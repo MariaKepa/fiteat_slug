@@ -8,11 +8,11 @@
     <p> Nazwa lub hasło nieprawidłowe </p>
   {% endif %}
   <div class = "login_action">
-    <form action="{% url 'login' %}" method = "post">
+    <form action="{% url 'fiteat:login' %}" method = "post">
       {{form.as_p}}{% csrf_token %}
       {% comment %} <input type = "hidden" name = "next" value ="{% url 'dashboard'%}"/> {% endcomment %}
       <p><input type="submit" value="Zaloguj się"></p>
-      <h6><a href = "{% url 'password_reset'%}"> Nie pamietasz hasła?</a><h6>
+      <h6><a href = "{% url 'fiteat:password_reset'%}"> Nie pamietasz hasła?</a><h6>
     </form>
   </div>     
 </section> 

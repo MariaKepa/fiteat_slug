@@ -31,13 +31,15 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'fiteat',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'fiteat',
+    'cart',
+    
 ]
 
 MIDDLEWARE = [
@@ -129,8 +131,8 @@ STATICFILES_DIRS = (
 )
 
 #----------------LOGIN------------------
-LOGIN_REDIRECT_URL = reverse_lazy('first_page')
-LOGIN_URL = reverse_lazy('login')
+LOGIN_REDIRECT_URL = reverse_lazy('fiteat:first_page')
+LOGIN_URL = reverse_lazy('fiteat:login')
 
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
@@ -140,3 +142,8 @@ TEMPLATE_LOADERS = (
     'django.template.loaders.app_directories.load_template_source',
 )
 
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
+
+#------------KOSZYK----
+CART_SESSION_ID = 'cart'

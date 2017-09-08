@@ -5,7 +5,7 @@ from django.core.urlresolvers import reverse
 
 class Category(models.Model):
     name = models.CharField(max_length=200)
-    pathtopicture = models.CharField(max_length=200, default=None) 
+    image = models.ImageField(upload_to='fotocategory/%Y/%m/%d', blank=True)
     slug = models.SlugField(max_length=200, db_index=True, unique=True) 
 
     class Meta:
@@ -26,7 +26,7 @@ class Product(models.Model):
     carbon = models.FloatField(default=0.0)
     fats = models.FloatField(default=0.0)
     calories = models.FloatField(default=0.0)
-    weight = models.FloatField(default=100) 
+    weight = models.FloatField(default=100.0)
     slug = models.SlugField(max_length=200, db_index=True, unique=True) 
 
     class Meta:
@@ -35,7 +35,7 @@ class Product(models.Model):
 
     def __str__(self):
         return self.name
-    
+
     def get_absolute_url(self):
         return reverse('fiteat:product_detail', args=[self.id , self.slug])
 
